@@ -1,4 +1,15 @@
 
+
+
+2021年10月27日
+ある日付の
+月曜日の求め方はLocalDateをつかう
+
+ZoneId zoneId = ZoneId.of( "America/Montreal" );
+LocalDate today = LocalDate.now( zoneId );
+LocalDate previousMonday = today.with( TemporalAdjusters.previous( DayOfWeek.MONDAY ) );
+今日が月曜日で、1週間前ではなく今日を使用したい場合は 、 previousOrSame呼び出します。
+
 2021年10月26日
 ファイルの読み書き
 日付の扱い
